@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tỏ Tình Với Thư</title>
   <style>
     * {
@@ -17,16 +17,14 @@
       overflow: hidden;
       font-family: 'Segoe UI', sans-serif;
       display: flex;
+      flex-direction: column; /* cho logo và card xếp dọc */
       align-items: center;
       justify-content: center;
       padding: 20px;
     }
 
-    /* Logo góc trái */
+    /* Logo nằm trên card, căn giữa */
     .logo-text {
-      position: fixed;
-      top: 15px;
-      left: 15px;
       font-size: 20px;
       font-weight: bold;
       color: white;
@@ -34,11 +32,13 @@
       padding: 8px 16px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-      display: flex;
+      display: inline-flex;
       align-items: center;
       gap: 6px;
-      z-index: 999;
       font-family: 'Segoe UI', sans-serif;
+      margin-bottom: 20px; /* cách xa phần card */
+      cursor: default;
+      animation: pulse 1.2s infinite;
     }
 
     .heart-icon {
@@ -152,7 +152,7 @@
 </head>
 <body>
 
-  <!-- Logo góc trái -->
+  <!-- Logo nằm trên card -->
   <div class="logo-text">
     Thư <span class="heart-icon" onclick="alert('Anh yêu Thư nhiều lắm! ❤️')">❤️</span>
   </div>
